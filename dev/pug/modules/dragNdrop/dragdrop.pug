@@ -1,18 +1,22 @@
 section.dragdrop
-	.container
+	.dragdrop__inner
 		h1.dragdrop__title Мы будем рады сделать предложение
+		button.dragdrop__close
 		p.dragdrop__text Мы свяжемся с Вами в течении 30 минут
-	form.dragdrop__form
-		.dragdrop__field
-			label.dragdrop__label(for="inputName") Ваше имя*
-			input.dragdrop__input(type="text" name="name" id="inputName")
-		.dragdrop__field
-			label.dragdrop__label(for="inputPhone") Телефон*
-			input(type="tel" name="phone" id="inputPhone")
-		.dragdrop__field
-			label(for="inputEmail") Ваша почта*
-			input(type="email" name="mail" id="inputEmail")
-		.dragdrop__field
-			label.dragdrop__label(for="inputText") Опишите Вашу задачу (можете оставить поле пустым)
-			textarea.dragdrop__input.dragdrop__input--textarea(name="text" cols="30" rows="10")
-		button.dragdrop__button(type="submit") Получить предложение
+		form.dragdrop__form(action="")
+			.dragdrop__field.dragdrop__field--name
+				label.dragdrop__label(for="inputName") Ваше имя*
+				input.dragdrop__input(type="text" name="name" id="inputName")
+			.dragdrop__field.dragdrop__field--phone
+				label.dragdrop__label(for="inputPhone") Телефон*
+				input(type="tel" name="phone" id="inputPhone")
+			.dragdrop__field.dragdrop__field--mail
+				label.dragdrop__label(for="inputEmail") Ваша почта*
+				input(type="email" name="mail" id="inputEmail")
+			.dragdrop__field.dragdrop__field--textarea
+				label.dragdrop__label(for="inputText") Опишите Вашу задачу (можете оставить поле пустым)
+				textarea.dragdrop__input.dragdrop__input--textarea(name="text" id="inputText")
+			.dragdrop__field-file.dropzone
+				label.dragdrop__label(for="fileElem") Перенесите файл сюда или выбирите
+				input.dragdrop__file(type="file" id="fileElem" name="file" multiple)
+			button.dragdrop__button(type="submit") Получить предложение

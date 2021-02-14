@@ -1,0 +1,129 @@
+.dragdrop {
+  align-items: center;
+  background-color: #273548;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+  &__inner {
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    padding: 20px 30px 45px;
+    position: relative;
+    width: 700px;
+  }
+  &__close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    padding: 0;
+    right: 20px;
+    top: 20px;
+    transition: all ease-out 0.15s;
+    width: 40px;
+    height: 40px;
+    &::after, &::before {
+      background-color: #000000;
+      content: '';
+      height: 3px;
+      position: absolute;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 30px;
+      top: 50%;
+      transition: all ease-out 0.15s;
+      left: 50%;
+    }
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg)
+    }
+    &:hover {
+      &::after, &::before {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) rotate(0);
+      }
+    }
+  }
+  &__title {
+    color: #273548;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 12px;
+  }
+  &__text {
+    color: #666666;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 30px;
+  }
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &--name {
+      margin: 0 17px 0 0;
+      margin-bottom: 20px;
+      width: 50%;
+    }
+    &--phone {
+      flex-grow: 1;
+      width: auto;
+    }
+    &--mail {
+      margin: 0 0 24px 0;
+    }
+    &--textarea {
+      margin-bottom: 35px;
+    }
+    input, textarea {
+      background-color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 11px;
+      transition: all ease-out 0.15s;
+      &:focus {
+        outline: 1px solid black;
+      }
+      &:hover {
+        box-shadow: 0px 0px 6px #000;
+      }
+    }
+    textarea {
+      min-height: 135px;
+    }
+  }
+  &__label {
+    color: #A9A9A9;
+    font-size: 18px;
+    line-height: 25px;
+    padding-bottom: 4px;
+  }
+  &__button {
+    background-color: #FADB4A;
+    border: none;
+    border-radius: 36px;
+    color: #273548;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0 auto;
+    padding: 16px 85px;
+    &:hover {
+      background-color: rgba(#FADB4A, 0.8);
+    }
+    &:focus {
+      outline: 1px solid black;
+    }
+  }
+}
+
+.dropzone {
+  margin-bottom: 40px;
+}
